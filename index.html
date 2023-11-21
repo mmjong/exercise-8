@@ -7,48 +7,44 @@
 <title>Exercise 8: Responsive Web Design</title>
 <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto" rel="stylesheet"> 
 <style>
-  div {
-  max-width: 800px;
-}
+  
 /** note I select Pacifico as my body text and Roboto further down the page for my header and link font, I can use these because of the reference in the <head> in the HTML doc **/
 body {
 font-family: "Pacifico", cursive;
 font-size: 30px;
 background-color: aqua;
 }
-  @media only screen and (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     body {
       background-color: yellow;
       font-size: 0.75em;
       p, h1, h2, ul, img {
-        max-width: 100%;
+        max-width: 100%
       }
-      
     }
-    @media only screen and (max-width: 800px)
-      < p style="font-size:10vw"</p>
-  
   }
-   
-
-/* Responsive Design Additions */
-
   
-/* misc. styling */
+    @media screen and (min-width: 601px) { 
+       body { 
+      < p style="font-size:10vw"</p>
+      p, h1, h2, ul, img {width: 800px}
+      }
+  }
 
 ul a {
 color: magenta;
 }
 
 p , h1 , h2 , ul , img {
-margin-left: 0;
-  
+margin-left: 0; 
 }
 
 img {
 margin-top: 20px;
 display: block;
-  max-width: 100%;
+  min-width: 100%;
+max-width: 800px;  
+  
 
 }
 
